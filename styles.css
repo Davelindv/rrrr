@@ -1,0 +1,750 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+/* Top Bar */
+.top-bar {
+    position: fixed; /* Fix the top bar at the top */
+    top: 0px; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 1030; /* Ensure it stays above other content */
+    background-color: #bdbdbd; /* Change this to your desired color */
+    color: rgb(73, 72, 72); /* Change text color if needed */
+    padding: 2px 0;
+    min-height: 10px; /* Set a minimum height for the navbar */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the items */
+}
+
+.phone {
+    color: black; /* Set the text color to black */
+    font-size: 16px; /* Adjust the size if needed */
+    padding: 5px 0; /* Add padding for spacing */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), /* White glow effect */
+                 0 0 10px rgba(255, 255, 255, 0.5), 
+                 0 0 15px rgba(0, 0, 0, 0.7); /* Darker outer glow */
+}
+
+.custom-navbar {
+    position: fixed; /* Fix the navbar at the top */
+    top: 55px; /* Position it below the top bar (adjust this if your top bar height changes) */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    z-index: 1020; /* Ensure it stays above other content but below the top bar */
+
+    background-color: #fdf036; /* Change this to your desired color */
+    padding: 0.5rem 0; /* Adjust the vertical padding to change the depth */
+    min-height: 80px; /* Set a minimum height for the navbar */
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Vertically center the items */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff; /* Change the color of the brand name */
+    font-size: 1.75rem; /* Increase font size for visibility */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.custom-navbar .navbar-brand:hover {
+    transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+.custom-navbar .logo {
+    height: 10px; /* Set the desired height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    font-size: 50px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #3d3d3d; /* Change the color of the nav items */
+    font-size: 1.2rem; /* Adjust the font size for the navbar links */
+    line-height: 1.5; /* Adjust line height for spacing */
+    padding: 0.5rem 1rem; /* Adjust padding for spacing around links */
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid transparent; /* Add a transparent border by default */
+    border-radius: 5px; /* Round corners for a modern look */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #5f5f5d; /* Change color on hover for a modern effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+    border: 2px solid #4b4b49; /* Change border color on hover */
+}
+
+
+/*/////////////////////////////*/
+.carousel-caption h5.company-name {
+    font-size: 3rem; /* Increase font size for visibility */
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* White color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    animation: fadeInCompany 1.5s ease-in-out forwards; /* Company name fades in first */
+    opacity: 0; /* Initially hidden */
+    letter-spacing: 2px; /* Slightly increased spacing between letters */
+    margin-bottom: 10px; /* Space below the company name */
+    margin-left: 120px; /* Space below the company name */
+}
+
+.carousel-caption p.slogan {
+    animation: fadeInSlogan 3s ease-in-out forwards; /* Slogan fades in after the company name */
+    animation-delay: 1.5s; /* Delay slogan animation to appear after the company name */
+    opacity: 0; /* Initially hidden */
+    color: #ffffff; /* White color for clarity */
+    font-size: 1.5rem; /* Slightly smaller than company name */
+    text-align: center; /* Center the slogan */
+}
+
+@keyframes fadeInCompany {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlogan {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*/////////////////////////////*/
+
+/* Carousel */
+
+#carousel {
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 100px;
+    left: 100%;
+    transform: translateX(-50%) translateY(50px); /* Start position off-screen */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.carousel img {
+    max-height: 400px;
+    object-fit: cover;
+    transition: transform 1.5s ease; /* Smooth zoom effect */
+}
+
+.carousel-image-container {
+    position: relative;
+    overflow: hidden; /* Hide the part of the image that scales beyond the container */
+}
+
+.carousel-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1); /* Initial scale */
+    transition: transform 1.5s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Overlay for Darkening Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.company-name {
+    font-size: 50px;
+    color: #0004ff;
+}
+
+.slogan {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Hover Effects for Zoom and Text Slide */
+.carousel-item.active .carousel-image-container img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.carousel-item.active .carousel-caption {
+    opacity: 1; /* Show text */
+    transform: translateX(-50%) translateY(0); /* Slide up to original position */
+}
+
+/* Vision and Mission Section */
+.vision-mission-section {
+    background: linear-gradient(135deg, #f0f4f8 30%, #e8ebef 100%); /* Subtle gradient background */
+    padding: 60px 0; /* Add vertical padding */
+    position: relative;
+}
+
+.vision-mission-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('your-background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Light opacity for a professional look */
+    z-index: 0;
+}
+
+.container.my-5 {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the background */
+}
+
+.card {
+    border: none; /* Remove border for clean look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More shadow on hover */
+}
+
+.card-title {
+    font-size: 26px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: #0056b3; /* Brand color for title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Increased spacing between letters */
+    background: linear-gradient(to right, #0056b3, #00c6ff); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text */
+    color: transparent; /* Make text color transparent to show gradient */
+    padding: 5px 0; /* Vertical padding for spacing */
+    border-bottom: 2px solid #0056b3; /* Underline effect */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+.card-title:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    color: #00c6ff; /* Change color on hover */
+}
+
+.card-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* Softer dark color */
+}
+
+@media (min-width: 768px) {
+    .card-text {
+        font-size: 20px; /* Larger text on bigger screens */
+    }
+}
+
+
+/* Styles for Experience Card */
+.experience-boxes {
+    display: flex; /* Use flex to align boxes vertically */
+    flex-direction: column; /* Stack boxes vertically */
+}
+
+.box {
+    display: flex; /* Flex for inner alignment */
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center align the text */
+    justify-content: center; /* Center content */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    width: 100px; /* Width of the box, adjust as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+
+    .hover-effect {
+        transform: scale(1.05); /* Lightly zoom in */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Glow effect with shadow */
+        background-color: rgba(200, 200, 200, 0.5); /* Optional: Change background color to a lighter grey */
+    }
+}
+
+.zoom {
+    animation: zoomIn 0.5s forwards; /* Animation to zoom in */
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    100% {
+        transform: scale(1.25); /* Scale up to 125% for a more pronounced zoom */
+    }
+}
+
+.box-text {
+    font-size: 24px; /* Font size for the main text */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.box-label {
+    font-size: 14px; /* Smaller font size for labels */
+    opacity: 0.8; /* Slight transparency */
+}
+
+.box-description {
+    font-size: 20px; /* Font size for description text */
+    color: #fff; /* Change text color to white for contrast */
+    margin: 20px ; /* Remove margin for proper spacing */
+    line-height: 1.4; /* Increase line height for better readability */
+    font-weight: bold; /* Bold font for emphasis */
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background color */
+    padding: 15px; /* Add padding around the text */
+    border-radius: 8px; /* Rounded corners for the background */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    letter-spacing: 1px; /* Slightly increase spacing between letters */
+}
+
+.glow-effect {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 10px rgba(255, 255, 0, 0.5); /* Yellow glow effect */
+}
+
+/* Optional hover effect for added interactivity */
+.box-description:hover {
+    transform: scale(1.05); /* Slightly enlarge the description on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.expertise {
+    padding: 50px 0;
+    background-color: #ffffff; /* Fallback color */
+    text-align: center;
+    background-image: url('MEDIA/fimage1.jpg'); /* Update with your image path */
+    background-position: right; /* Position the image on the right */
+    background-size: cover; /* Cover the entire section */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.expertise h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+.expertise h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 20px auto;
+}
+
+/* Grid Styles */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Item Styles */
+.expertise-item {
+    background: linear-gradient(135deg, #007bff, #00c4ff);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Start slightly below */
+    margin: 20px; /* Add margin for spacing between items */
+}
+
+/* Icon Styles */
+.expertise-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Text Styles */
+.expertise-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.expertise-item p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation only when the animate class is added */
+.expertise-item.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Delay for each item */
+.expertise-item:nth-child(1) { animation-delay: 0.1s; }
+.expertise-item:nth-child(2) { animation-delay: 0.25s; }
+.expertise-item:nth-child(3) { animation-delay: 0.40s; }
+.expertise-item:nth-child(4) { animation-delay: 0.55s; }
+.expertise-item:nth-child(5) { animation-delay: 0.7s; }
+.expertise-item:nth-child(6) { animation-delay: 0.85s; }
+.expertise-item:nth-child(7) { animation-delay: 1s; }
+.expertise-item:nth-child(8) { animation-delay: 1.15s; }
+
+/* Hover Effect for the class */
+.expertise-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Slightly more pronounced hover effect */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Adding glow effect on hover */
+.expertise-item:hover h3,
+.expertise-item:hover p {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller min width */
+    }
+
+    .expertise h2 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    .expertise-item {
+        margin: 10px; /* Reduce margin on mobile */
+    }
+}
+
+
+
+/* Chatbot Container */
+.chatbot-container {
+    width: 350px;
+    height: 500px;
+    position: fixed;
+    bottom: 20px; /* Adjusted to sit more comfortably at the bottom */
+    right: 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for a more elegant look */
+    z-index: 2005;
+    overflow: hidden; /* Prevent content overflow */
+    font-family: 'Arial', sans-serif; /* Use a professional, clean font */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transitions for a modern feel */
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+#close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#close-chat:hover {
+    color: #ff4d4d; /* Slight color change on hover for interactivity */
+}
+
+/* Chat Body */
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    scrollbar-width: thin; /* Custom scrollbar */
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 123, 255, 0.6);
+    border-radius: 10px;
+}
+
+/* Chat Messages */
+.message {
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    max-width: 80%;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3); /* Subtle shadow for depth */
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Chat Input */
+.chat-input {
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: border 0.3s;
+}
+
+.chat-input input:focus {
+    border-color: #007bff;
+}
+
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-left: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); /* Soft shadow for depth */
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Toggle Button */
+.open-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Strong shadow to make it stand out */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index : 1080;
+}
+
+.open-chat-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.5); /* More shadow on hover */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90%; /* Make the chatbot wider on mobile */
+        height: 80%;
+        bottom: 10px;
+        right: 5%;
+    }
+
+    .open-chat-btn {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    color: #212529;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+/*about page html*/
+
+/* Zigzag Card Section */
+.zigzag-section {
+    padding: 50px 0;
+}
+
+.zigzag-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.zigzag-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zigzag-card img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.zigzag-card .card-text {
+    width: 45%;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}
+
+.zigzag-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.zigzag-card h4 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    color: #212529;
+}
+
+.contact-us a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3c9BvK6nA1PhC4iA9c5Lzt8d1J5C2q5f3p5z" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar bg-green text-light">
+    <div class="container-fluid d-flex justify-content-between align-items-center py-2">
+        <div class="phone">📞 +968-99802340, +968-98082804</div>
+        <div class="social-media d-flex align-items-center"> <!-- Added d-flex to align items -->
+            <a href="mailto:testemail@gmail.com" class="text-light mr-4" title="Email">
+                <i class="fas fa-envelope"></i> <!-- Dummy Mail icon -->
+            </a>
+            <span class="text-light mr-4">sjhdbksjh@gmail.com</span> <!-- Display email -->
+            <a href="#" class="text-light mr-4" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-light mr-4" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-light mr-4" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="arabicindex.html" class="Arabic text-light mr-4 btn btn-primary" role="button">
+                عربي
+            </a>
+        </div>
+    </div>
+</div>
+
+    <nav class="navbar navbar-expand-lg custom-navbar"> <!-- Use custom class here -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <!-- Link to index.html -->
+                <img src="MEDIA/RADHA LOGO.jpeg" alt="Company Logo" class="logo" style="width: 220px; height: auto;"> Radha Construction Co.
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+   <!-- Image Slider -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-image-container">
+                <img src="MEDIA/fimage1.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="overlay"></div> <!-- Overlay for darkening effect -->
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="company-name">Radha Steel Structures</h5>
+                <p class="slogan">Crafting Strength, Building Futures.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image-container">
+                <img src="MEDIA/fimage2.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="overlay"></div> <!-- Overlay for darkening effect -->
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="company-name">Radha Steel Structures</h5>
+                <p class="slogan">Where Steel Meets Innovation.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image-container">
+                <img src="MEDIA/fimage3.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="overlay"></div> <!-- Overlay for darkening effect -->
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="company-name">Radha Steel Structures</h5>
+                <p class="slogan">Precision Fabrication, Enduring Solutions.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image-container">
+                <img src="MEDIA/fimage4.jpg" class="d-block w-100" alt="Slide 4">
+                <div class="overlay"></div> <!-- Overlay for darkening effect -->
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="company-name">Radha Steel Structures</h5>
+                <p class="slogan">Designing Durability: Your Trusted Partner in Steel and PEB.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image-container">
+                <img src="MEDIA/fimage5.jfif" class="d-block w-100" alt="Slide 5">
+                <div class="overlay"></div> <!-- Overlay for darkening effect -->
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="company-name">Radha Steel Structures</h5>
+                <p class="slogan">Elevating Structures, Empowering Futures.</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+    <!-- Vision and Mission Cards -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Vision</h5>
+                        <p class="card-text">“To redefine the future of construction through
+                            visionary steel structures and pioneering PEB designs,
+                            where every project reflects our dedication to
+                            innovation, precision, and sustainable progress.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Mission</h5>
+                        <p class="card-text">“We are committed to revolutionizing the construction
+                            industry by delivering groundbreaking steel structure
+                            and PEB design solutions. Our mission is to blend
+                            advanced engineering with creative excellence,
+                            ensuring that each project not only meets but
+                            exceeds industry standards. Through relentless
+                            dedication to quality, collaborative partnerships, and
+                            eco-friendly practices, we strive to build a legacy of
+                            transformative impact and enduring value.”
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Experience Section -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4"> <!-- Adjust the width to fit the content -->
+            <div class="d-flex align-items-start position-relative">
+                <div class="experience-boxes me-3">
+                    <div class="d-flex align-items-center">
+                        <div class="box years-box" id="years-box">
+                            <span class="box-text" id="years-count">0</span>
+                            <span class="box-label">Years</span>
+                        </div>
+                        <p class="box-description ms-3" id="years-description">Years of experience in the construction industry.</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="box projects-box" id="projects-box">
+                            <span class="box-text" id="projects-count">0</span>
+                            <span class="box-label">Projects</span>
+                        </div>
+                        <p class="box-description ms-3" id="projects-description">Successfully completed projects across various sectors.</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="box clients-box" id="clients-box">
+                            <span class="box-text" id="clients-count">0</span>
+                            <span class="box-label">Happy Clients</span>
+                        </div>
+                        <p class="box-description ms-3" id="clients-description">Satisfied clients with our quality service and dedication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center mb-4"> <!-- Carousel for images -->
+            <div id="experienceCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="height: 400px;"> <!-- Set a fixed height -->
+                        <img src="MEDIA/pebimage.jpg" alt="Experience Image 1" class="img-fluid mx-auto" style="border-radius: 8px; height: 100%; width: auto; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item" style="height: 400px;">
+                        <img src="MEDIA/pebimage2.jpg" alt="Experience Image 2" class="img-fluid mx-auto" style="border-radius: 8px; height: 100%; width: auto; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item" style="height: 400px;">
+                        <img src="MEDIA/pebimage3.jpg" alt="Experience Image 3" class="img-fluid mx-auto" style="border-radius: 8px; height: 100%; width: auto; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item" style="height: 400px;">
+                        <img src="MEDIA/pebimage4.jpg" alt="Experience Image 4" class="img-fluid mx-auto" style="border-radius: 8px; height: 100%; width: auto; object-fit: cover;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#experienceCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#experienceCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Expertise Section -->
+<section class="expertise">
+    <div class="container">
+        <h2>Our Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-hard-hat"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Structural Design</h3>
+                <p>Innovative and efficient structural designs tailored to your project needs.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-tools"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Fabrication</h3>
+                <p>High-quality steel fabrication with precision and expertise.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-building"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>PEB Solutions</h3>
+                <p>Customized Pre-Engineered Buildings to meet your specifications.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-project-diagram"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Project Management</h3>
+                <p>Comprehensive project management to ensure timely delivery and quality.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-chart-line"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Consultation</h3>
+                <p>Expert consultation for optimal design and execution.</p>
+            </div>
+            <!-- New Expertise Items -->
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-wrench"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Design and Build</h3>
+                <p>Comprehensive design and build solutions specializing in steel and Pre-Engineered Buildings (PEB). We deliver efficient construction with a focus on quality and innovation.</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-lightbulb"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>Quality Assurance & Quality Control</h3>
+                <p>Delivering top-notch quality through rigorous inspections and testing, ensuring compliance and client satisfaction</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <i class="fas fa-globe"></i> <!-- FontAwesome icon -->
+                </div>
+                <h3>One Stop for Steel, PEB, and RCC Design</h3>
+                <p>Your all-in-one solution for steel, pre-engineered building (PEB), and reinforced cement concrete (RCC) design.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chatbot Container -->
+<div class="chatbot-container">
+    <div class="chat-header">
+        <h4>Chatbot</h4>
+        <button id="close-chat">X</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <!-- Chat messages will appear here -->
+    </div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button class="open-chat-btn" id="open-chat-btn">Chat</button>
+
+
+
+    <!-- Footer -->
+<footer class="bg-light text-dark text-center py-3">
+    <div class="container">
+        <p>&copy; 2024 Radha Construction Co. All Rights Reserved.Dave</p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Connect your script.js file -->
+<script src="path/to/your/script.js"></script> <!-- Update this with the actual path to your script.js -->
+
+
+<script>
+    // Function to animate counting
+    function animateCount(elementId, targetNumber, duration) {
+        let start = 0; // Starting number
+        const stepTime = Math.abs(Math.floor(duration / targetNumber)); // Time per step
+
+        const interval = setInterval(() => {
+            start += 1; // Increment the count
+            document.getElementById(elementId).innerText = start + "+"; // Update the text with plus sign
+
+            // Stop counting at the target number
+            if (start >= targetNumber) {
+                clearInterval(interval); // Stop the interval
+            }
+        }, stepTime);
+    }
+
+    // Function to handle the entire animation sequence
+    function startAnimation() {
+        // Animate each box with its corresponding number
+        animateCount("years-count", 10, 600); // Count to 10
+        setTimeout(() => {
+            document.getElementById("years-description").classList.add("show");
+            addGlowEffect("years-description");
+            
+        }, 6000); // Show description after 6 seconds
+
+        animateCount("projects-count", 100, 60); // Count to 100
+        setTimeout(() => {
+            document.getElementById("projects-description").classList.add("show");
+            addGlowEffect("projects-description");
+        }, 6000); // Show description after 6 seconds
+
+        animateCount("clients-count", 100, 60); // Count to 100
+        setTimeout(() => {
+            document.getElementById("clients-description").classList.add("show");
+            addGlowEffect("clients-description");
+        }, 6000); // Show description after 6 seconds
+
+        // Trigger the hover effect after all animations
+        setTimeout(() => {
+            const boxes = document.querySelectorAll('.box'); // Select all box elements
+            boxes.forEach(box => {
+                box.classList.add('hover-effect'); // Add hover effect class to each box
+            });
+
+            // Remove hover effect after the animation ends
+            setTimeout(() => {
+                boxes.forEach(box => {
+                    box.classList.remove('hover-effect'); // Remove hover effect class to reset
+                });
+            }, 1000); // Wait 1 second before removing the hover effect
+        }, 10000); // Wait until all counts and descriptions have been shown
+    }
+
+    // Function to add glow effect to description
+    function addGlowEffect(descriptionId) {
+        const description = document.getElementById(descriptionId);
+        description.classList.add('glow-effect'); // Add glow effect class
+    
+
+
+        // Remove glow effect after 1 second
+        setTimeout(() => {
+            description.classList.remove('glow-effect'); // Remove glow effect class to reset
+        }, 1000); // Glow for 1 second
+    }
+
+    // Start the animation
+    window.onload = startAnimation;
+
+    // Repeat the animation every 30 seconds
+    setInterval(startAnimation, 3000); // Repeat every 30 seconds
+</script>
+
+
+
+<script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    
+    // Function to add the 'animate' class to expertise items when in view
+    function checkExpertiseInView() {
+        const expertiseItems = document.querySelectorAll('.expertise-item');
+        expertiseItems.forEach(item => {
+            if (isElementInViewport(item)) {
+                item.classList.add('animate');
+            } else {
+                item.classList.remove('animate'); // Remove class if scrolled away (optional)
+            }
+        });
+    }
+    
+    // Check on scroll and resize
+    window.addEventListener('scroll', checkExpertiseInView);
+    window.addEventListener('resize', checkExpertiseInView);
+    
+    // Initial check on page load
+    document.addEventListener('DOMContentLoaded', checkExpertiseInView);
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

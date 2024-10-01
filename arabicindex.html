@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar bg-green text-light">
+        <div class="container-fluid d-flex justify-content-between align-items-center py-2">
+            <div class="phone">📞 +968-99802340 , +968-98082804</div>
+            <div class="social-media d-flex align-items-center"> <!-- Added d-flex to align items -->
+                <a href="#" class="text-dark mr-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark mr-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-dark mr-4"><i class="fab fa-linkedin-in"></i></a>
+                <a href="index.html" class="Arabic text-dark mr-4 btn btn-primary" role="button">
+                    En
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg custom-navbar"> <!-- Use custom class here -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <!-- Link to index.html -->
+                <img src="MEDIA/RADHA LOGO.jpeg" alt="Company Logo" class="logo" style="width: 250px; height: auto;"> Radha Construction Co.
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Image Slider -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image-container">
+                    <img src="MEDIA/fimage1.jpg" class="d-block w-100" alt="Slide 1">
+                    <div class="overlay"></div> <!-- Overlay for darkening effect -->
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="company-name">Radha Steel Structures</h5>
+                    <p class="slogan">Innovating Your Future</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="MEDIA/fimage2.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="overlay"></div> <!-- Overlay for darkening effect -->
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="company-name">Radha Steel Structures</h5>
+                    <p class="slogan">Excellence in Every Step</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="MEDIA/fimage3.jpg" class="d-block w-100" alt="Slide 3">
+                    <div class="overlay"></div> <!-- Overlay for darkening effect -->
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="company-name">Radha Steel Structures</h5>
+                    <p class="slogan">Empowering Dreams</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="MEDIA/fimage4.jpg" class="d-block w-100" alt="Slide 4">
+                    <div class="overlay"></div> <!-- Overlay for darkening effect -->
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="company-name">Radha Steel Structures</h5>
+                    <p class="slogan">Building Tomorrow</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="MEDIA/fimage5.jfif" class="d-block w-100" alt="Slide 5">
+                    <div class="overlay"></div> <!-- Overlay for darkening effect -->
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="company-name">Radha Steel Structures</h5>
+                    <p class="slogan">Creating Lasting Impressions</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Vision and Mission Cards -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Vision</h5>
+                        <p class="card-text">“To redefine the future of construction through
+                            visionary steel structures and pioneering PEB designs,
+                            where every project reflects our dedication to
+                            innovation, precision, and sustainable progress.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Mission</h5>
+                        <p class="card-text">“We are committed to revolutionizing the construction
+                            industry by delivering groundbreaking steel structure
+                            and PEB design solutions. Our mission is to blend
+                            advanced engineering with creative excellence,
+                            ensuring that each project not only meets but
+                            exceeds industry standards. Through relentless
+                            dedication to quality, collaborative partnerships, and
+                            eco-friendly practices, we strive to build a legacy of
+                            transformative impact and enduring value.”
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-light text-dark text-center py-3">
+    <div class="container">
+        <p>&copy; 2024 Radha Construction Co. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
